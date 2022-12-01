@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AA0EF36-1001-46C2-A046-E7531F4CECC7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Quiz_Project</RootNamespace>
+    <AssemblyName>Quiz_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SuperSimpleTcp, Version=3.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SuperSimpleTcp.3.0.5\lib\net461\SuperSimpleTcp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectServer.cs" />
+    <Compile Include="InitRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InitRoom.Designer.cs">
+      <DependentUpon>InitRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPlayer.Designer.cs">
+      <DependentUpon>MenuPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Donate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donate.Designer.cs">
+      <DependentUpon>Donate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptPassword.cs" />
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InitQuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InitQuest.Designer.cs">
+      <DependentUpon>InitQuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginControl.Designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QuestAndAnswer.cs" />
+    <Compile Include="QuizGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuizGame.Designer.cs">
+      <DependentUpon>QuizGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuizRoom.cs" />
+    <Compile Include="RankUser.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfor.Designer.cs">
+      <DependentUpon>UserInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRank.Designer.cs">
+      <DependentUpon>ViewRank.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="InitRoom.resx">
+      <DependentUpon>InitRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPlayer.resx">
+      <DependentUpon>MenuPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InitQuest.resx">
+      <DependentUpon>InitQuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuizGame.resx">
+      <DependentUpon>QuizGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfor.resx">
+      <DependentUpon>UserInfor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRank.resx">
+      <DependentUpon>ViewRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Backgrounds\HomeBackGround.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Buttons\login-btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Images\terporaryPicture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Icons\homepage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Icons\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Icons\homepageIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Icons\hiddenEye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Backgrounds\ContentBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Buttons\btn_GetCaptcha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Buttons\btn_GetCaptchaHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Buttons\submit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Buttons\submitHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Buttons\login-btn-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Buttons\btn-register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Buttons\btn-resiter-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Icons\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Icons\gmail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Backgrounds\QuizGame.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Backgrounds\tong-hop-tat-ca-cac-thay-doi-trong-lien-minh-huyen-thoai-giai-do-bd5e22.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
